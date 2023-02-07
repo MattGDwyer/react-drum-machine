@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Column } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const App = () => {
   const [volume, setVolume] = useState(50);

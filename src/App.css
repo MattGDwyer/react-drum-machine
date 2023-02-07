@@ -1,9 +1,8 @@
 App {
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Big Shoulders Display', cursive!important;
 }
 
 .container {
-  font-family: 'Big Shoulders Display', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
