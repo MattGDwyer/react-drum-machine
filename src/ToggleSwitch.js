@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import './App.css'
 
-const ToggleSwitch = () => {
+const ToggleSwitch = ({ onToggle }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <div>
         <div 
-        className={`relative w-10 h-5 bg-gray-400 cursor-pointer border ${toggle ? 'bg-green-500' : 'bg-red-500'}`}
-        onClick={() => setToggle(!toggle)}
+        className={`relative w-12 h-6 bg-gray-400 cursor-pointer border ${toggle ? 'bg-green-500' : 'bg-red-500'}`}
+        onClick={() => {
+          setToggle(!toggle);
+          onToggle && onToggle(toggle);
+        }}
         >
-        <div 
-            className={`absolute top-1 left-1 w-3 h-3 bg-white shadow-md transition-all ease-in-out duration-300 ${toggle ? 'left-6' : 'left-1'}`}
-        ></div>
+            <div 
+                className="absolute top-0.4 left-0 w-5 h-5 bg-white transition-all ease-in-out 
+                duration-300" style={{ top: '.4px', left: toggle ? '51%' : '0px' }}
+
+            ></div>
         </div>
     </div>
   );

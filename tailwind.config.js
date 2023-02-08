@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       width: {
         "50vw": '50vw',
-        "100%": '100%'
-      }
+        "100%": '100%',
+      },
     },
   },
   plugins: [],
