@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import './App.css'
 import './tailwind.css';
+import ToggleSwitch from './ToggleSwitch';
 
 const App = () => {
   const [volume, setVolume] = useState(50);
   const [power, setPower] = useState(true);
   const [soundSet, setSoundSet] = useState(1);
+  const [toggle, setToggle] = useState(false);
+
+  const handleSetToggle = () => {
+    setToggle(!toggle);
+  }
 
   const handleVolumeChange = (e) => {
     setVolume(e.target.value);
@@ -23,21 +30,25 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center align-center items-center h-70vh w-80 bg-gray-300 
-      rounded-lg py-10">
-  <h2 className="text-xl font-bold">Boom Chic</h2>
+    <div className="flex flex-col justify-center align-center items-center h-70vh bg-white pb-10 border">
+<h2 className="text-xl text-center w-100% font-bold border-bottom">BKK Boom Chic</h2>
   <div className="flex mt-10">
     <div className="w-1/2 text-center">
-      <h3 className="text-lg font-medium">Power: {power ? 'On' : 'Off'}</h3>
-      <button onClick={handlePowerToggle} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Toggle Power
-      </button>
+    <h3 className="text-lg font-medium">Power</h3>
+    <ToggleSwitch onChange={handleSetToggle}/>
+    {/* <button 
+      onClick={handlePowerToggle} 
+      className={`w-10 h-10 rounded-full shadow-lg ${power ? 'bg-green-500' : 'bg-red-500'}`}
+    >
+      {power ? 'On' : 'Off'}
+    </button> */}
     </div>
     <div className="w-1/2 ml-10 text-center">
-      <h3 className="text-lg font-medium">Sound Set: {soundSet}</h3>
-      <button onClick={handleSoundSetToggle} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <h3 className="text-lg font-medium">Bank: {soundSet}</h3>
+      <ToggleSwitch />
+      {/* <button onClick={handleSoundSetToggle} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Toggle Sound Set
-      </button>
+      </button> */}
     </div>
   </div>
   <div className="mt-10">

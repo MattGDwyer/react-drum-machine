@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <Header />
     <div className="flex h-screen w-screen justify-center items-center">
-      <App className="w-screen"/>
+      <App />
     </div>
   </React.StrictMode>
 );
