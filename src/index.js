@@ -4,13 +4,15 @@ import './index.css';
 import Header from './Header'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './tailwind.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <App />
+    <div className="flex h-screen w-screen justify-center items-center">
+      <App className="w-screen"/>
+    </div>
   </React.StrictMode>
 );
 
