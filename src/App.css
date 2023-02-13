@@ -1,7 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .border {
     border: 3px solid black;
 }
 
 .border-bottom {
     border-bottom: 3px solid black;
+}
+
+
+.drum-machine {
+    @apply flex flex-col justify-center items-center bg-white pb-10 border;
+}
+
+/* This was the original drum-machine classnames set */
+/* flex flex-col justify-center align-center items-center h-70vh bg-white pb-10 border; */
+
+.title {
+    @apply text-xl text-center w-100% font-bold;
+}
+
+.toggle-container {
+    @apply flex mt-10;
+}
+
+.left-toggle {
+    @apply w-1/2 text-center;
+}
+
+.right-toggle {
+    @apply w-1/2 ml-10 text-center;
+}
+
+.toggle-title {
+    @apply text-lg font-medium;
+}
+
+.volume {
+    @apply mt-10;
+}
+
+.volume-title {
+    @apply text-lg font-medium;
+}
+
+.volume-range {
+    @apply w-full accent-gray-500;
+}
+
+/* original tailwind css */
+/* w-full range accent-gray-500; */
+
+.button-container {
+    @apply mt-10 flex flex-wrap;
+}
+
+.button-sound {
+    @apply w-1/3 mb-3;
 }
