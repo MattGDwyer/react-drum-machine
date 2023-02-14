@@ -43,7 +43,7 @@
 }
 
 .volume-title {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium text-center;
 }
 
 .volume-range {

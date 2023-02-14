@@ -4,7 +4,7 @@ import './App.css'
 const VolumeControl = (props) => {
     return (
         <div className="volume">
-            <h3 className="volume-title">Volume: {props.volume}</h3>
+            <h3 className="volume-title">Volume</h3>
             <input
                 type="range"
                 min="0"
