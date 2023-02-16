@@ -10,20 +10,24 @@
     border-bottom: 3px solid black;
 }
 
-
 .drum-machine {
-    @apply flex flex-col justify-center items-center bg-white pb-10 border;
+    @apply flex flex-col justify-center items-center min-w-fit bg-white pb-10 border;
 }
-
-/* This was the original drum-machine classnames set */
-/* flex flex-col justify-center align-center items-center h-70vh bg-white pb-10 border; */
 
 .title {
     @apply text-xl text-center w-100% font-bold;
 }
 
+.display {
+    @apply mt-5;
+}
+
 .toggle-container {
-    @apply flex mt-10;
+    @apply flex mt-5;
+}
+
+.toggle-square {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .left-toggle {
@@ -39,7 +43,7 @@
 }
 
 .volume {
-    @apply mt-10;
+    @apply mt-5;
 }
 
 .volume-title {
@@ -50,13 +54,14 @@
     @apply w-full accent-gray-500;
 }
 
-/* original tailwind css */
-/* w-full range accent-gray-500; */
-
 .button-container {
-    @apply mt-10 flex flex-wrap;
+    @apply w-full mt-10 ml-10 mr-10 flex flex-wrap justify-center items-center;
 }
 
-.button-sound {
-    @apply w-1/3 mb-3;
+.drum-pad {
+    @apply w-1/4 p-5 ml-1 mb-1 text-center text-2xl border cursor-pointer;
 }
+
+/* .drum-pad:active {
+    @apply bg-black text-white;
+} */

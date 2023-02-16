@@ -31,7 +31,7 @@ const Display = ({ volume, power, soundSet, sound, soundName }) => {
     }, [soundSet, power]);
 
     return (
-        <p className="text-lg font-medium mt-10" id="display">{displayText}</p>
+        <p className="text-lg font-medium mt-10 display" id="display">{displayText}</p>
     );
 };
 
