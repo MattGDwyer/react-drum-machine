@@ -67,7 +67,7 @@ const App = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [handleSoundPlay, soundData]);
+  }, [handleSoundPlay, soundData, soundSet]);
 
   return (
     <div className="drum-machine" id="drum-machine">
