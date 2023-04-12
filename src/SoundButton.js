@@ -14,14 +14,14 @@ const SoundButton = (props) => {
 
     useEffect(() => {
         const handleKeyDown = (event) => {
-            if (event.key === props.keyTrigger.toLowerCase()) {
+            if (event.key === props.keyTrigger.toLowerCase() || event.key === props.keyTrigger.toUpperCase()) {
                 setIsPressed(true);
                 props.handleSoundPlay(props.soundName);
             }
         };
 
         const handleKeyUp = (event) => {
-            if (event.key === props.keyTrigger.toLowerCase()) {
+            if (event.key === props.keyTrigger.toLowerCase() || event.key === props.keyTrigger.toUpperCase()) {
                 setIsPressed(false);
             }
         };
