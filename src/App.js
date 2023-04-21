@@ -23,16 +23,6 @@ const App = () => {
 
   const handlePowerToggle = () => {
     setPower(!power);
-    console.log(power);
-    const volumeSlider = document.getElementById("volume-slider");
-    const soundBankToggle = document.getElementById("sound-bank-toggle");
-    if (!power) {
-      volumeSlider.disabled = true;
-      soundBankToggle.disabled = true;
-    } else {
-      volumeSlider.disabled = false;
-      soundBankToggle.disabled = false;
-    }
   };
 
   const handleSoundSetToggle = () => {
@@ -50,18 +40,11 @@ const App = () => {
     if (!power) {
       return; // If power is off, don't play the sound
     }
-    const audioElement = audioRef.current;
-    audioElement.src = soundData[soundSet - 1].find((s) => s.id === sound).url;
+
+    const audioElement = document.getElementById(sound).querySelector("audio");
     audioElement.volume = volume / 100;
-    audioElement.currentTime = 0;
     audioElement.play();
-    console.log(audioElement)
-    // looks like i need to use document.getelementbyid instead of audioelement.play?
-    // so audioElement would equal document.getElementById(however I find the audio element.)
-    // the audio playing twice is likely a result of the mouseup also playing along with the mouseDown.
-    // then there's the power toggle error which has to do with, i think, the order in which
-    // variables are defined.
-    // then there's the destructuring of props in soundbutton.
+
   };
 
   useEffect(() => {
